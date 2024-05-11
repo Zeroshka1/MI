@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header container" id="head">
+        <div class="logo-burgerBtn">
+            <img src="Image/loho-orange.png" alt="s" class="logo">
+            <button class="burger-btn hidden" id="burger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="nav-butBtn hidden">
+            <nav class="nav">
+                <a href="" class="nav-link">О продукте</a>
+                <a href="" class="nav-link">Внешний вид</a>
+                <a href="" class="nav-link">Безопасность</a>
+                <a href="" class="nav-link">Отзывы</a>
+                <a href="" class="nav-link">FAQ</a>
+            </nav>
+            <button class="buy-btn hidden">Купить</button>
+        </div>
+    </header>
+    <div class="block-selectColor container" id="main">
+        <div class="text-btnSelect">
+            <div class="up">
+                <h1 class="Style-Scooter">Стильный электросамокат<br>с мощным аккумулятором</h1>
+                <p class="upgrade">Улучшенная производительность <br>для дальних путешествий. <br>Работает так же просто, <br>как и выглядит.</p>
+            </div>
+            <label class="switch btn-color-mode-switch">
+		        <input type="checkbox" name="color_mode" id="color_mode" value="1">
+		        <label for="color_mode" data-on="Черный" data-off="Белый" class="btn-color-mode-switch-inner"></label>
+		    </label>
+        </div>
+
+        <img src="Image/Байк.png" alt="main" id="Scooter">
+    </div>
+    <div class="block-slider container">
+        <h1 class="Title">Мощная батарея и экономичный расход<br> заряда позволяют преодолевать<br> расстояния до 45 км</h1>
+        <div class="slider-container">
+            <div class="slider-slide-text">
+                <div class="all-text-slide">
+                    <h2 class="title-slide noUseText">Три режима скорости</h2>
+                    <div class="progress_container">
+                        <div class="progress"></div>
+                    </div>
+                    <p class="text-slide noUseText">Три режима езды позволяют почуствовать себя комфортно в любой ситуации. Режим «S» увеличитвает скорость, если опаздываете на работу. Во время прогулки по парку активируйте режим «D». Включите режим «Пешеход», когда двигаетесь по оживлённой улице.</p>
+                </div>
+                <img src="Image/slide-1.png" alt="" class="slide-image">
+            </div>
+
+            <div class="slider-slide-text">
+                <div class="all-text-slide">
+                    <h2 class="title-slide noUseText">Система восстановления энергии</h2>
+                    <div class="progress_container">
+                        <div class="progress"></div>
+                    </div>
+                    <p class="text-slide noUseText">Во время торможения и движения по инерции система преобразовывает кинетическую энергию в электрическую, позволяя увеличить общий запас хода самоката.</p>
+                </div>
+                <img src="Image/slide-2.png" alt="" class="slide-image">
+            </div>
+
+            <div class="slider-slide-text">
+                <div class="all-text-slide">
+                    <h2 class="title-slide noUseText">Мощная батарея</h2>
+                    <div class="progress_container last">
+                        <div class="progress"></div>
+                    </div>
+                    <p class="text-slide noUseText">Самокат оснащен аккумулятором емкостью 12 800 мАч. Это позволяет преодолевать расстояния до 45 км без подзарядки.</p>
+                </div>
+                <img src="Image/slide-3.png" alt="" class="slide-image">
+            </div>
+        </div>
+    </div>
+    <!-- <div class="baner-speed-block">
+        <div class="baner-text-logo container">
+            <img src="Image/logo.png" alt="" class="MI-white">
+            <div class="text-BS">
+                <h2 class="BS-title">Высокая скорость <br>передвижения</h2>
+                <p class="BS-text">Двигатель мощностью до 600 Вт позволяет развивать скорость до 25 км/ч.</p>
+            </div>
+        </div>
+    </div> -->
+    <script src="main.js"></script>
+</body>
+</html>

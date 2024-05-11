@@ -1,0 +1,623 @@
+*{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
+.no-scroll{
+    overflow-y: hidden;
+}
+body::-webkit-scrollbar {
+    width: 12px;
+  }
+  body::-webkit-scrollbar-track {
+    background: #222222;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #FC501F;
+    border-radius: 20px;
+    border: 3px solid #FF4C0D;
+  }
+body{
+    background: #222222;
+    overflow-x: hidden;
+}
+.headen{
+    display: none;
+}
+.container{
+    margin: 0 auto;
+    max-width: 75em;
+    width: 100%;
+}
+.header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 3em;
+    z-index: 3;
+}
+.header::after{
+    content: '';
+    filter: blur(200px);
+    z-index: -1;
+    width: 40em;
+    height: 40em;
+    border-radius: 100em;
+    background: #FC501F;
+    position: absolute;
+    top: 200;
+    right: -400px;   
+}
+.nav-butBtn{
+    display: flex;
+    align-items: center;
+}
+.nav{
+    z-index: 10;
+    display: flex;
+    margin: 0em 19em 0em 4em;
+}
+.nav.headen{
+    display: block;
+}
+.nav-link{
+    margin: 0 1.25em;
+    transition: .5s;
+}
+.nav-link:hover{
+    color:#FF4C0D;
+}
+.buy-btn{
+    cursor: pointer;
+    background: #F1F1F1;
+    border: none;
+    border-radius: 4em;
+    padding: 1em 2em;
+    color: black;
+    font-weight: 600;
+}
+.buy-btn.hidden{
+    display: block;
+}
+.burger-btn{
+    display:none;
+}
+/* block-selectorColor */
+.block-selectColor{
+    margin-top: 8em;
+}
+.text-btnSelect{
+    display: flex;
+    flex-direction: column;
+}
+.up{
+    position: relative;
+}
+.Style-Scooter{
+    position: relative;
+    font-size: 5em;
+    font-weight: 600;
+    z-index: 10;
+}
+.upgrade{
+    margin: 2.8em 0em 4.3em 0em;
+    color: #FF4C0D;
+    font-size: 1.8em;
+    font-weight: 600;
+    z-index: 10;
+}
+/* Самокат */
+#Scooter{
+    pointer-events: none;
+    width: 1400px;
+    height: 1100px;
+    position: absolute;
+    top:-1em;
+    left: 32.3em;
+    z-index: 8;
+    transition: .5s;
+}
+
+/* переключатель */
+.btn-color-mode-switch{
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+    width: 254px;
+}
+.btn-color-mode-switch > label.btn-color-mode-switch-inner{
+    margin: 0px;
+    width: 15.5em;
+    height: 3.75em;
+    border: #F1F1F1 3px solid;
+    background: none;
+    border-radius:69px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
+    content: attr(data-on);
+    position: absolute;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 21px 15px;
+    top: 0;
+    right: 10px;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
+    content: attr(data-off);
+    width: 7em;
+    height: 1.2em;
+    color: #000;
+    background: #e0e0e0;
+    border-radius: 26px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 21px 15px;
+    font-weight: 600;
+}
+.btn-color-mode-switch input[type="checkbox"]{
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    margin: 0px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+    background: none;
+    color: #000;
+    border: #000 3px solid;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
+    content: attr(data-on);
+    left: 108px;
+    color: #F1F1F1;
+    background: #000000;
+    font-weight: 600;
+    
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
+    content: attr(data-off);
+    right: auto;
+    left: 10px;
+    padding: 21px 15px;
+}
+.btn-color-mode-switch input[type="checkbox"]:checked ~ .alert{
+    display: block;
+}
+
+/* блок со слайдером */
+.noUseText{
+    color: #f1f1f150;
+}
+.useText{
+    color: #F1F1F1;
+}
+.block-slider{
+    margin-top: 15em;
+    position: relative;
+}
+
+.block-slider::before{
+    content: '';
+    filter: blur(300px);
+    z-index: -1;
+    width: 30em;
+    height: 30em;
+    border-radius: 100em;
+    background: #FC501F;
+    position: absolute;
+    top: -200px;
+    right: 700px; 
+}
+.progress_container {
+    margin-top: 20px;
+    width: 400px;
+    height: 3px;
+    background-color: #666666;
+    margin-bottom: 20px;
+}
+
+.progress {
+    width: 0;
+    height: 3px;
+    background-color: #FF4C0D;
+    transition: width .5s linear;
+}
+
+.progress_container.last {
+    width: 360px !important;
+}
+
+
+
+.title-slide{
+    font-size: 20px;
+    font-weight: 600;
+}
+.text-slide{
+    font-weight: 400;
+    width: 360px;
+    height: 126px;
+    font-size: 14px;
+    line-height: 130%;
+    word-spacing:  -1px;
+}
+.Title{
+    font-size: 2.8em;
+    font-weight: 500;
+    margin-bottom: 1.5em;
+}
+.slider-container{
+    display: flex;
+    align-items: center;
+}
+.slider-slide-text{
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    height: 533px;
+}
+.slide-image{
+    width: 22.5em;
+}
+.active-image {
+    top: 450px;
+    position: absolute;
+    z-index: 2;
+    width: 760px;
+    height: 400px;
+    transition: all 0.5s ease;
+}
+.last-image-active {
+    top: 450px;
+    left: 400px;
+    position: absolute;
+    z-index: 2;
+    width: 760px;
+    height: 400px;
+    transition: all 0.5s ease;
+}
+.all-text-slide{
+    margin-bottom: 30px;
+}
+/* Блок с банером во весь экран */
+.baner-speed-block{
+    position: relative;
+    z-index:1000;
+    width: 100%;
+    margin-top: 200px;
+    height:700px;
+    background-image: url(/Image/baner-speed.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.baner-speed-block::before{
+    content: '';
+    top: -400px;
+    left: -0;
+    background-image: url(/Image/Path-1.png);
+    background-position: end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    z-index:-1000;
+}
+.MI-white{
+    margin: 120px 0 150px 0;
+}
+.BS-title{
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.BS-text{
+    width: 360px;
+    font-size: 14px;
+}
+@media screen and (max-width: 27.5em) {
+    body::-webkit-scrollbar {
+        display: none;
+      }
+    body{
+        position: relative;
+        width: 100%;
+        overflow-x: hidden;
+        
+    }
+    .logo-burgerBtn{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2000;
+    }
+    .logo{
+        margin: 0;
+    }
+    html{
+        overflow: auto;
+    }
+    .container{
+        max-width: 18em;
+    }
+    .header{
+        margin-top: 1em;
+    }
+    .header::after{
+        content: '';
+        filter: blur(100px);
+        z-index: -1;
+        width: 13em;
+        height: 13em;
+        border-radius: 100em;
+        background: #FC501F;
+        position: absolute;
+        top: 500;
+        right: -100px;   
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0em;
+    }
+    .nav-link{
+        margin: 1em 0em;
+    }
+    .buy-btn.hidden{
+        z-index: 2000;
+        display: block;
+    }   
+    .nav-butBtn{
+        top:-1000%;
+        left:-20%;
+        align-items: start;
+        position: absolute;
+        padding: 3em 3.5em;
+        display: flex;
+        flex-direction: column;
+        width: 27em;
+        margin: 0;
+        background: #222222;
+        transition: .5s;
+        z-index: 2;
+    }
+    .burger-btn.hidden{
+        display: block;
+    }
+    .burger-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.8em;
+        height: 2.8em;
+        border-radius: 65em;
+        border: none;
+        background: #F1F1F1;
+        position: relative;
+        z-index: 2000;
+    }
+    .burger-btn span{
+        position: absolute;
+        width: 18px;
+        height: 3px;
+        background-color: black;
+        border-radius: 1000px;
+        left:30%;
+        transition: transform .5s, opacity .5s;
+    }
+    .burger-btn span:nth-child(1) {
+        transform: translateY(-6px);
+    }
+    .burger-btn span:nth-child(2) {
+        width: 18px;
+    }
+    .burger-btn span:nth-child(3) {
+        transform: translateY(6px);
+    }
+    .header.open .burger-btn span:nth-child(1) {
+        transform: translateY(0) rotate(45deg);
+    }
+    .header.open .burger-btn span:nth-child(2) {
+        opacity: 0;
+    }
+    .header.open .burger-btn span:nth-child(3) {
+        transform: translateY(0) rotate(-45deg);
+    }
+    .header.open .nav-butBtn {
+        transform: translateY(99%);
+        transition: .5s;
+    }
+    /* блок с самокатом */
+    .block-selectColor{
+        display: flex;
+        flex-direction: column-reverse;
+        overflow: hidden;
+        
+    }
+    .Style-Scooter{
+        font-size: 30px;
+        z-index: 1;
+    }
+    .upgrade{
+        margin: 20px 0px;
+        font-size: 1em;
+    }
+    .text-btnSelect{
+        overflow: hidden;
+    }
+    .up{
+        margin-top: 18em;
+    }
+    #Scooter{
+        pointer-events: none;
+        width: 600px;
+        height: 500px;
+        position: absolute;
+        top: 0;
+        left: -9em;
+        z-index: 1;
+        overflow: hidden;
+    }
+    .main::before {
+        content: "";
+        position: absolute;
+        top: -20em;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        backdrop-filter: blur(8px);
+        pointer-events: none; /* Убедитесь, что псевдоэлемент не мешает взаимодействию с контентом */
+    }
+    .light-theme{
+        .title-slide.noUseText{
+            color: #FF4C0D;
+        }
+        .text-slide.noUseText{
+            color:#F1F1F1;
+        }
+    }
+    .dark-theme {
+        .nav-butBtn{
+            background-color: #F1F1F1;
+        }
+        .buy-btn{
+            background-color: #222222;
+            color: #F1F1F1;
+        }
+        .title-slide.noUseText{
+            color: #FF4C0D;
+        }
+        .text-slide.noUseText{
+            color:#000000;
+        }
+    }
+    /* Блок с автоматическим слайдером */
+    .slider-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .all-text-slide{
+        margin: 0;
+    }
+    .slider-slide-text{
+        height: auto;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .block-slider{
+        margin-top: 60px;
+    }
+    .Title{
+        font-size: 25px;
+    }
+    .title-slide{
+        width: 100%;
+        font-size: 16px;
+        line-height: 170%;
+    }
+    .text-slide{
+        width: 100%;
+        height: auto;
+    }
+    .progress_container{
+        margin: 14px 0px 10px 0px;
+        width: 100px;
+    }
+    .progress{
+        width: 100%;
+    }
+    .title-slide.noUseText{
+        color: #FF4C0D;
+    }
+    .text-slide{
+        color:#F1F1F1;
+        margin-bottom: 20px;
+    }
+    .slide-image{
+        width: 280px;
+    }
+    .progress_container.last {
+        width:100px !important;
+    }
+}
+/* Светлая тема */
+.light-theme {
+    background-color: #222222;
+    *{
+        color: #fff;
+    }
+    .upgrade{
+        color: #FF4C0D;
+        transition: 1s;
+    }
+    .buy-btn{
+        color: #000;
+        transition: 1s;
+    }
+    .noUseText{
+        color: #f1f1f150;
+        transition: 1s;
+    }
+    .useText{
+        color: #F1F1F1;
+        transition: 1s;
+    }
+}
+/* Темная тема */
+.dark-theme {
+    background-color: #fff;
+    *{
+        color: #000;
+    }
+    .Style-Scooter{
+        color: #FF4C0D;
+        transition: 1s;
+    }
+    .noUseText{
+        color: #989898;
+        transition: 1s;
+    }
+    .useText{
+        color: #000000;
+        transition: 1s;
+    }
+    .title-slide.useText{
+        color: #FF4C0D;
+    }
+    .progress_container{
+        background: #989898;
+    }
+}
+/* Анимация самоката */
+.slide-out-left {
+    transform: translateX(80%);
+  }
+.slide-in-from-right {
+    transform: translateX(0%);
+}
